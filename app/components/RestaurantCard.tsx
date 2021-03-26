@@ -31,7 +31,7 @@ const CardDetailText: React.FC = ({ children }) => {
 }
 
 const Rating: React.FC<{ rating: number }> = ({ rating }) => {
-    return <Text style={styles.h2}>{rating}</Text>
+    return <Text style={styles.h2}>{rating.toFixed(1)}</Text>
 }
 
 const styles = StyleSheet.create({

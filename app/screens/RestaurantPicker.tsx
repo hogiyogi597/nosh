@@ -5,7 +5,12 @@ import RestaurantSwiper from '../components/RestaurantSwiper';
 function RestaurantPicker() {
     return (
         <View style={styles.container}>
-            <RestaurantSwiper />
+            <RestaurantSwiper
+                onSwipedAll={() => console.log("swiped all... loading more")}
+                onSwipeRight={() => console.log("Liked foooooood")}
+                onSwipeBottom={() => console.log("Saved for later")}
+                onSwipeLeft={() => console.log("no thanks")}
+            />
         </View>
     );
 }

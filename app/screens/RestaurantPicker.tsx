@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native'
+import { View, Text, StyleSheet, FlatList } from 'react-native'
 import RestaurantSwiper from '../components/RestaurantSwiper';
 
 function RestaurantPicker() {
@@ -12,8 +12,7 @@ function RestaurantPicker() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, 
-        backgroundColor: 'yellow'
+        flex: 1,
     }
 })
 

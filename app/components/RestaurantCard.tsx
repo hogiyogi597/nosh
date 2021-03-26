@@ -17,41 +17,50 @@ function RestaurantCard({ imageUrl, name, rating }: RestaurantCardProps) {
                     width: width,
                     uri: imageUrl
                 }
-            }/>
+            } />
             <View style={styles.cardDetails}>
                 <CardDetailText>{name}</CardDetailText>
-                <CardDetailText>{rating}</CardDetailText>
+                <Rating rating={rating} />
             </View>
         </View>
     );
 }
 
-const CardDetailText: React.FC = ({children}) => {
-    return <Text style={styles.text}>{children}</Text>
+const CardDetailText: React.FC = ({ children }) => {
+    return <Text style={styles.h1}>{children}</Text>
 }
 
-const Rating = (rating: number) => {
-    
-    for(let i = 0; i < rating; i++) {
-        
-    }
-    return <Image source={} />
+const Rating: React.FC<{ rating: number }> = ({ rating }) => {
+    return <Text style={styles.h2}>{rating}</Text>
 }
 
 const styles = StyleSheet.create({
     card: {
+        shadowColor: "black",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.51,
+        shadowRadius: 13.16,
+
+        elevation: 20,
         overflow: 'hidden',
-        borderRadius: 20
+        borderRadius: 20,
+        backgroundColor: 'white'
     },
     cardDetails: {
-
-        backgroundColor: 'red',
         display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        marginLeft: 5,
+        paddingBottom: 10,
     },
-    text: {
+    h1: {
         fontSize: 25
+    },
+    h2: {
+        fontSize: 20
     }
 })
 
